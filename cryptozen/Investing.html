@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<title>Investing</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/Investing.css">
+	<script src="/js/Investing.js"></script>
+
+
+
+</head>
+
+<body class="Investing">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<a class="navbar-brand" href="index.html">Cryptozen</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="Storage.html">Storage</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="Investing.html">Investing</a>
+				</li>
+				<li class="nav-item active dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Coins
+					</a>
+					<div class="legordulo">
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Bitcoin</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Ethereum</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="Else.html">Binance coin</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<br><br>
+
+	<div class="boxborder">
+		<h2>World of the decentralized finance</h2>
+	</div>
+
+	<div class="boxborder">
+		<form>
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<label class="text-white">First name</label>
+					<input type="text" class="form-control" id="firstName" placeholder="First name" value="">
+				</div>
+				<div class="col-md-6 mb-3">
+					<label class="text-white">Surname</label>
+					<input type="text" class="form-control" id="lastName" placeholder="Surname" value="">
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label class="text-white">Email <span class="text-muted"></span></label>
+				<input type="email" class="form-control" id="email" placeholder="you@example.com">
+			</div>
+
+			<div class="mb-3">
+				<label class="text-white">Phone number</label>
+				<input type="text" class="form-control" id="address" placeholder="+36">
+			</div>
+
+			<div class="mb-3">
+				<label class="text-white">Address</label>
+				<input type="text" class="form-control" placeholder="Address">
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<label class="text-white">City</label>
+					<select class="custom-select d-block w-100" id="ide">
+						<option>Budapest</option>
+						<option>Veszprém</option>
+						<option>Székesfehérvár</option>
+						<option>Győr</option>
+					</select>
+				</div>
+
+
+				<div class="col-md-6 mb-3">
+					<label class="text-white">Zip code</label>
+					<input type="text" class="form-control" id="zip" placeholder="Zip">
+				</div>
+			</div>
+			<div class="col-md-5 mb-3" id="hozzaad">
+				<label class="text-white">Add city</label>
+				<input type="text" class="form-control" id="varos" placeholder="Add"><br>
+				<a class="btn btn-primary" onclick="hozzaad()">Add</a>
+			</div>
+			<hr class="mb-4">
+			<h4 class="mb-3 text-white">Choose your course</h4>
+			<select class="custom-select d-block w-100" id="csomag">
+				<option id="1day" value="1day">1 day</option>
+				<option>2 days</option>
+			</select>
+			<br>
+			<a class="btn btn-primary" onclick="rendel()">Add</a><br>
+			<br>
+			<div class="col-md-5 mb-3" id="hozzaad">
+				<label class="text-white">Online assistance hours </label>
+				<input type="number" class="form-control" id="darab" placeholder="Quantity"><br>
+				<a class="btn btn-primary" onclick="rendel()">Add</a>
+			</div>
+
+
+			<h4 class="mb-3 text-white">Payment method</h4>
+
+			<div class="d-block my-3">
+				<div class="custom-control custom-radio">
+					<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+					<label class="custom-control-label text-white" for="credit">Bank card</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+					<label class="custom-control-label text-white" for="debit">Paypal</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+					<label class="custom-control-label text-white" for="paypal">Crypto</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<label class="text-white">Cardholder name</label>
+					<input type="text" class="form-control" id="cc-name" placeholder="Name">
+				</div>
+				<div class="col-md-6 mb-3">
+					<label class="text-white">Card number</label>
+					<input type="text" class="form-control" id="cc-number"
+						placeholder="xxxxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxxx">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<label class="text-white">Expiration date</label>
+					<input type="text" class="form-control" id="cc-expiration" placeholder="00/00">
+				</div>
+				<div class="col-md-3 mb-3">
+					<label class="text-white">CVV</label>
+					<input type="text" class="form-control" id="cc-cvv" placeholder="***">
+				</div>
+			</div>
+			<p id="vegosszeg" class="mb-3 text-white">Price: </p>
+			<hr class="mb-4">
+			<button class="btn btn-primary btn-lg btn-block" type="submit" onclick="rendeles()">Submit order</button>
+		</form>
+	</div>
+	<div class="boxborder-video"> <iframe
+			src="https://www.youtube.com/embed/videoseries?controls=0&autoplay=1&mute=1&loop=1&amp;list=PLGK510MJYTw3poJtQ02s3rXdB0aldPL3C"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe></div>
+
+		<div class="editor">
+			<p class="edit">Edited by: Roland Rajkó</p>
+		</div>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

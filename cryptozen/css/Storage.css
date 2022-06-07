@@ -1,0 +1,26 @@
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.nav-link{
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-right: 55px;
+  font-size: clamp(1rem, 1.15vw, 5rem);
+}
+  
+.navbar-brand {
+  font-size: clamp(1rem, 2.4vw, 5rem);
+}
+
+.py-5 {
+  background-image: url(/media/pexels-crypto-crow-1447418.jpg);
+}
+
+.container {
+  color: rgb(156, 156, 182);
+}
