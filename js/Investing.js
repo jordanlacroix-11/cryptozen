@@ -9,7 +9,8 @@ function hozzaad() {
     option.text = v;
     d.add(option);
 }
-function rendel() {
+
+function rendel(){
     var csomag = document.getElementById("csomag").value;
     var szoveg = "Végösszeg: ";
     var osszeg = 0;
@@ -18,14 +19,22 @@ function rendel() {
         osszeg = 17000;
     else
         osszeg = 30000;
-    szoveg = szoveg + osszeg + " Ft";
-    document.getElementById("vegosszeg").innerHTML = szoveg;
-    var darab = document.getElementById("darab").value;
-    if (darab > 0) {
-        szorzat = darab * 3000;
-        osszeg = osszeg + szorzat;
-    }
-
     szoveg = "Végösszeg: " + osszeg + " Ft";
     document.getElementById("vegosszeg").innerHTML = szoveg;
+
+    var darab = document.getElementById("darab").value;
+    if (darab > 0) {
+        osszeg = osszeg + darab * 3000;
+    }
+    szoveg = "Végösszeg: " + osszeg + " Ft";
+    document.getElementById("vegosszeg").innerHTML = szoveg;
+}
+
+function hideShowDiv(val){
+  if (val==1){
+    document.getElementById('div').style.display='block';
+  }
+  else {
+    document.getElementById('div').style.display='none';
+  }
 }

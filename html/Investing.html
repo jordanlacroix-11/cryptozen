@@ -15,7 +15,7 @@
 
 <body class="Investing">
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-		<a class="navbar-brand" href="index.html">Cryptozen</a>
+		<a id="zen" class="navbar-brand" href="/index.html">Cryptozen</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#">Ethereum</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="Else.html">Binance coin</a>
+							<a class="dropdown-item" href="#">Binance coin</a>
 						</div>
 					</div>
 				</li>
@@ -123,37 +123,39 @@
 
 			<div class="d-block my-3">
 				<div class="custom-control custom-radio">
-					<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+					<input id="credit" name="paymentMethod" type="radio"  onclick="hideShowDiv(1)" class="custom-control-input" checked required>
 					<label class="custom-control-label text-white" for="credit">Bank card</label>
 				</div>
 				<div class="custom-control custom-radio">
-					<input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+					<input id="debit" name="paymentMethod" type="radio" onclick="hideShowDiv(2)" class="custom-control-input" required>
 					<label class="custom-control-label text-white" for="debit">Paypal</label>
 				</div>
 				<div class="custom-control custom-radio">
-					<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+					<input id="paypal" name="paymentMethod" type="radio" onclick="hideShowDiv(3)" class="custom-control-input" required>
 					<label class="custom-control-label text-white" for="paypal">Crypto</label>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6 mb-3">
-					<label class="text-white">Cardholder name</label>
-					<input type="text" class="form-control" id="cc-name" placeholder="Name">
+			<div id="div">
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label class="text-white">Cardholder name</label>
+						<input type="text" class="form-control" id="cc-name" placeholder="Name">
+					</div>
+					<div class="col-md-6 mb-3">
+						<label class="text-white">Card number</label>
+						<input type="text" class="form-control" id="cc-number"
+							placeholder="xxxxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxxx">
+					</div>
 				</div>
-				<div class="col-md-6 mb-3">
-					<label class="text-white">Card number</label>
-					<input type="text" class="form-control" id="cc-number"
-						placeholder="xxxxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxxx">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 mb-3">
-					<label class="text-white">Expiration date</label>
-					<input type="text" class="form-control" id="cc-expiration" placeholder="00/00">
-				</div>
-				<div class="col-md-3 mb-3">
-					<label class="text-white">CVV</label>
-					<input type="text" class="form-control" id="cc-cvv" placeholder="***">
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label class="text-white">Expiration date</label>
+						<input type="text" class="form-control" id="cc-expiration" placeholder="00/00">
+					</div>
+					<div class="col-md-3 mb-3">
+						<label class="text-white">CVV</label>
+						<input type="text" class="form-control" id="cc-cvv" placeholder="***">
+					</div>
 				</div>
 			</div>
 			<p id="vegosszeg" class="mb-3 text-white">Price: </p>
@@ -161,15 +163,17 @@
 			<button class="btn btn-primary btn-lg btn-block" type="submit" onclick="rendeles()">Submit order</button>
 		</form>
 	</div>
+
 	<div class="boxborder-video"> <iframe
-			src="https://www.youtube.com/embed/videoseries?controls=0&autoplay=1&mute=1&loop=1&amp;list=PLGK510MJYTw3poJtQ02s3rXdB0aldPL3C"
+			src="https://www.youtube.com/embed/b5BNUa_op2o?controls=1&autoplay=1&mute=1&loop=1;"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen></iframe></div>
+			allowfullscreen></iframe>
+	</div>
 
-		<div class="editor">
-			<p class="edit">Edited by: Roland Rajkó</p>
-		</div>
+	<div class="editor">
+		<p class="edit">Edited by: Roland Rajkó</p>
+	</div>
 
 
 

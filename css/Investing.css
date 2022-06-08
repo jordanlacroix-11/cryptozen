@@ -3,14 +3,21 @@ body {
     background-size: contain;
 }
 
-#navbar-brand {color: rgb(118, 118, 212); font-size: xx-large;}
+#zen {
+    color: #40a7db;
+    font-size: xx-large;
+    transition: 300ms;
+}
+
+#zen:hover{
+    color: white;
+    transition: 300ms;
+}
 
 #video {padding: 50px;
     justify-content: center;
     min-width: 100vw;
 }
-
-.nav-link {color: white;}
 
 
 .boxborder {
@@ -37,21 +44,21 @@ body {
 .boxborder-video {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; 
-        height: 0;
+        padding-bottom: 56%; 
+        height: 100%;
       }
 
 .boxborder-video iframe{
     position: absolute;
-    top:0;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
     height: 60%;
-    border-radius: 10px;
+    border-radius: 50px;
     margin-bottom: 20px;
+
 }
-    
+
 .nav-link{
     font-family: sans-serif;
     text-transform: uppercase;
